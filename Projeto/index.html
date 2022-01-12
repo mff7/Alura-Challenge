@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./assets/css/reset.css">
+    <link rel="stylesheet" href="./assets/css/dracula.css">
+    <link rel="stylesheet" href="./assets/css/base.css">
+    <link rel="stylesheet" href="./assets/css/cabecalho.css">
+    <link rel="stylesheet" href="./assets/css/menu-lateral.css">
+    <link rel="stylesheet" href="./assets/css/editor-codigo.css">
+    <link rel="stylesheet" href="./assets/css/informacoes-projeto.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto+Mono&display=swap">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter&display=swap">
+
+
+    <title> Alura | Challenge </title>
+</head>
+
+<body>
+    <div class="background">
+        <header class="cabecalho">
+            <div class="cabecalho__logo">
+                <img src="./assets/img/logo.svg" alt="Logo do Alura Dev" class="logo">
+            </div>
+            <div class="cabecalho__barra-pesquisa">
+                <input type="text" class="barra-pesquisa" placeholder="Busque por algo">
+            </div>
+            <div class="cabecalho__usuario">
+                <img src="./assets/img/foto.svg" alt="Foto do usuário" class="usuario__foto">
+                <p class="usuario__nome">Harry</p>
+            </div>
+            <div class="cabecalho__icones">
+                <img src="./assets/img/icone-pesquisa.svg" alt="Icone pesquisa" class="cabecalho__icone-pesquisa">
+                <input type="checkbox" id="check">
+                <label for="check" id="icone-menu"><img src="./assets/img/icone-menu.svg" alt="Icone menu"
+                        class="cabecalho__icone-menu"></label>
+                <label for="check" id="icone-fechar"><img src="./assets/img/icone-fechar.svg" alt="Icone fechar"
+                        class="cabecalho__icone-fechar"></label>
+                <div class="menu">
+                    <div class="menu__background">
+                        <nav>
+                            <div class="nav__menu">
+                                <div class="menu__icone-code"><img src="./assets/img/icone-code.svg"
+                                        alt="Icone de codigo">
+                                    <p class="menu__texto">Editor de código</p>
+                                </div>
+                                <a href="./comunidade.html">
+                                    <div class="menu__icone-comunidade link">
+                                        <img src="./assets/img/icone-comunidade.svg" alt="Icone Comunidade">
+                                        <p class="menu__texto">Comunidade</p>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="menu__usuario">
+                                <img src="./assets/img/foto.svg" alt="Foto do usuário" class="usuario__foto">
+                                <p class="usuario__nome">Harry</p>
+                            </div>
+                        </nav>
+                    </div>
+                </div>
+            </div>
+        </header>
+        <main>
+            <section class="sidebar">
+                <div class="sidebar__menu">
+                    <h2 class="menu__titulo">Menu</h2>
+                    <div class="menu__icone-code"><img src="./assets/img/icone-code.svg" alt="Icone de codigo">
+                        <p class="menu__texto">Editor de código</p>
+                    </div>
+                    <a href="./comunidade.html">
+                        <div class="menu__icone-comunidade link">
+                            <img src="./assets/img/icone-comunidade.svg" alt="Icone Comunidade">
+                            <p class="menu__texto">Comunidade</p>
+                        </div>
+                    </a>
+                </div>
+            </section>
+            <form class="formulario">
+                <fieldset class="formulario__editor-codigo">
+                    <div class="editor-codigo__borda">
+                        <div class="editor-codigo__cabecalho">
+                            <img src="./assets/img/botao-editor-codigo.svg" alt="Ilustração dos botões mac"
+                                class="editor-codigo__cabecalho-botoes">
+                            <div class="editor-codigo__codigo">
+                                <code class="codigo" contenteditable="true"
+                                    aria-label="editor de código">function teste() {}</code>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="editor-codigo__botao-highlight">
+                        <button type="button" class="botao-highlight">Visualizar com highlight</button>
+                    </div>
+                </fieldset>
+                <section class="formulario__informacoes">
+                    <fieldset class="formulario__projeto">
+                        <h2 class="projeto__titulo">seu projeto</h2>
+                        <input type="text" class="projeto__nome" required placeholder="Nome do seu projeto">
+                        <textarea type="text" class="projeto__descricao" required
+                            placeholder="Descrição do seu projeto"></textarea>
+                    </fieldset>
+                    <fieldset class="formulario__personalizacao">
+                        <h2 class="personalizacao__titulo">personalização</h2>
+                        <div class="personalizacao__responsivo-tablet">
+                            <select class="personalizacao__linguagens">
+                                <option>JavaScript</option>
+                                <option>HTML</option>
+                                <option>CSS</option>
+                            </select>
+                            <div class="personalizacao__input-color">
+                                <input type="color" class="input-color" value="#6BD1FF" oninput="alterarCorBorda();">
+                            </div>
+                        </div>
+                    </fieldset>
+                    <div class="formulario__botao-enviar">
+                        <button type="submit" class="botao-enviar">Salvar projeto</button>
+                    </div>
+                </section>
+            </form>
+        </main>
+    </div>
+    <script src="./assets/JS/altera-cor-borda.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.3.1/highlight.min.js"></script>
+    <script src="./assets/JS/highlight.js"></script>
+    <script src="./assets/JS/localStorage.js"></script>
+</body>
+
+</html>

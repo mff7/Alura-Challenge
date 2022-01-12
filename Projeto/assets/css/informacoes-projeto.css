@@ -1,0 +1,139 @@
+.projeto {
+    display: flex;
+    flex-direction: column
+}
+
+.projeto__titulo, .personalizacao__titulo {
+    margin-top: 32px;
+    margin-bottom: 16px;
+    text-transform: uppercase;
+    font-family: 'Inter', sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 12px;
+    color: #FFFFFF;
+    letter-spacing: 0.4em;
+    margin-top: 2.5rem;
+    margin-bottom: 1rem
+}
+
+.projeto__nome, .personalizacao__linguagens, .personalizacao__input-color {
+    height: 3.6rem;
+    margin-bottom: 16px;
+}
+
+.projeto__descricao {
+    height: 5rem
+}
+
+.projeto__descricao, .projeto__nome, .personalizacao__linguagens, .botao-enviar {
+    resize: none;
+    width: 100%;
+    font-family: 'Inter', sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 24px;
+    border-radius: 8px;
+    border: none;
+    outline: none;
+    padding: 1rem;
+    background-color: rgba(255, 255, 255, 0.16);
+    opacity: 0.64;
+    color: #FFFFFF;
+}
+
+.personalizacao__linguagens {
+    border-right: 8px solid transparent;
+    height: 3.6rem
+}
+
+.personalizacao__linguagens>option {
+    color: #555555;
+}
+
+.projeto__nome::placeholder, .projeto__descricao::placeholder {
+    color: #FFFFFF
+}
+
+.projeto__nome:hover, .projeto__nome:focus, .projeto__descricao:hover, .projeto__descricao:focus, .personalizacao__linguagens:hover, .personalizacao__linguagens:focus {
+    background: rgba(255, 255, 255, 0.24);
+}
+
+.personalizacao__input-color {
+    margin-bottom: 2rem;
+    border: 1px solid #FFFFFF;
+    border-radius: 8px
+}
+
+.input-color {
+    margin: 2px 4px;
+    width: calc(100% - 8px);
+    height: 50px;
+    border: none;
+    background-color: transparent;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    cursor: pointer;
+}
+
+.input-color::-webkit-color-swatch {
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 4px;
+    border: none
+}
+
+.input-color::-moz-color-swatch {
+    border-radius: 4px;
+    border: none
+}
+
+.botao-enviar {
+    background-color: #5081FB;
+    opacity: 1;
+    color: #051D3B;
+}
+
+.botao-enviar:hover {
+    background-color: #7BA4FC;
+}
+
+.botao-enviar:active {
+    background-color: #7BA4FC;
+    border: 4px solid rgba(80, 129, 251, 0.72);
+}
+
+.botao-enviar:focus {
+    background: #96B9FD
+}
+
+@media screen and (min-width:768px) {
+    .personalizacao__responsivo-tablet {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .personalizacao__linguagens, .personalizacao__input-color {
+        width: 49%;
+    }
+}
+
+@media screen and (min-width:1024px) {
+
+    .formulario__informacoes {
+        width: 28%;
+    }
+
+    .projeto__titulo {
+        margin-top: 0;
+    }
+
+    .personalizacao__responsivo-tablet {
+        flex-direction: column;
+    }
+
+    .personalizacao__linguagens, .personalizacao__input-color {
+        width: 100%;
+    }
+}
